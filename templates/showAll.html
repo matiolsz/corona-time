@@ -1,0 +1,26 @@
+<!--shawAll.html-->
+
+<!--Embed the header.html template-->
+{{ template "header.html" .}}
+
+<ul class="list-group">
+
+            <!--Loop over the list of videos -->        
+            {{range .covids }}        
+            <li class="list-group-item">
+                            
+                                <h4>Date:</h4>
+                                <p>{{.DateChecked}}</p>
+                                <h4>Positive cases:</h4>
+                                <p>{{.Positive}}</p>
+                                <h4>Negative cases:</h4>
+                                <p>{{.Negative}}</p>
+                                <h4>Hospitalized cases:</h4>
+                                <p>{{.Hospitalized}}</p>
+                            </li>
+                             
+            {{end}}
+        
+
+<!--Embed the footer.html template-->
+{{ template "footer.html" .}}
